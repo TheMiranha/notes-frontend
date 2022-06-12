@@ -22,7 +22,7 @@ const Notes = ({ api }) => {
     formData.append('description', description)
     const location = document.getElementById('profile_location').value
     formData.append('location', location)
-    await api.saveProfile(formData)
+    await api.saveProfile(formData).then(() => window.location.reload());
   }
 
   if (!api.user) {
@@ -33,7 +33,6 @@ const Notes = ({ api }) => {
     <div>
       <main className='bg-gray-100 dark:bg-gray-800 rounded-2xl h-screen overflow-hidden relative'>
         <div className='flex items-start justify-between'>
-          {/* <Sidebar/> */}
           <div className='flex flex-col w-full pl-0 md:p-4 md:space-y-4'>
             <Header api={api} />
             <div className='flex flex-col w-full'>

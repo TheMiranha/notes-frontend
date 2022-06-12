@@ -46,11 +46,11 @@ const Header = ({ api, terminal, setTerminal, setSearch }) => {
                   type='text'
                   autoComplete='off'
                   id='note_title'
-                  className=' rounded-lg border-transparent flex-1 appearance-none border border-gray-400 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent'
+                  className='mb-2 rounded-lg border-transparent flex-1 appearance-none border border-gray-400 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent'
                   placeholder='Título'
                 />
               </a>
-              <a className='mt-2 relative'>
+              <a className='relative'>
                 <input
                   type='text'
                   autoComplete='off'
@@ -103,47 +103,6 @@ const Header = ({ api, terminal, setTerminal, setSearch }) => {
           </div>
 
           <div className='relative p-1 flex items-center justify-end w-1/2 ml-5 mr-4 sm:mr-0 sm:right-auto'>
-            <div className='dropdown dropdown-end' style={{ marginRight: 5 }}>
-              <label tabIndex='0' className='btn btn-ghost lg:hidden'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-5 w-5'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M4 6h16M4 12h8m-8 6h16'
-                  />
-                </svg>
-              </label>
-              <ul
-                tabIndex='0'
-                className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
-              >
-                <li>
-                  {terminal == 'notes' ? (
-                    <a href="/profile" className='bg-blue-600' style={{ color: 'white' }}>
-                      Notas
-                    </a>
-                  ) : (
-                    <a>Notas</a>
-                  )}
-                </li>
-                <li>
-                  {terminal == 'settings' ? (
-                    <a className='bg-blue-600' style={{ color: 'white' }}>
-                      Configurações
-                    </a>
-                  ) : (
-                    <a>Configurações</a>
-                  )}
-                </li>
-              </ul>
-            </div>
             <div href='#' className='dropdown dropdown-end block relative'>
               <label tabIndex={0}>
                 <img

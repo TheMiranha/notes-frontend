@@ -100,12 +100,13 @@ const Settings = ({ note, api, setTags, tags, priority, setPriority, status, set
             Sinta-se livre para compartilhar sua nota com outros usuários
           </p>
         </div>
-        <div className='flex relative mt-2' style={{ width: '50%' }}>
+        <div className='flex relative mt-2' style={{ width: '50%'}}>
           <input
           id="share_code_input"
-            value={note.share_code ? note.share_code : 'Link ainda não gerado'}
+            value={note.share_code ? note.share_code : 'Não gerado'}
             type='text'
             className=' rounded-l-lg flex-1 appearance-none border border-gray-300 py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none '
+            style={{maxWidth: '80%'}}
           />
           <select onChange={(e) => setShareCodeStatus(e.target.value)} className="select select-bordered" style={{borderLeft: 'none', borderRadius: 0}}>
       <option selected={note.share_code_status == 0} value='0'>Desativado</option>
