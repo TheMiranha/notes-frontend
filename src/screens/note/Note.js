@@ -31,7 +31,7 @@ const Note = ({ api }) => {
           setValue(note.content)
           setShareCodeStatus(note.shareCodeStatus);
           if (note.tags){
-            setTags(note.tags.split(','));
+            setTags(note.tags);
           }
           if(note.priority){
             setPriority(`${note.priority}`);

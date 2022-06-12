@@ -15,7 +15,7 @@ const Notes = ({ api }) => {
         window.location.href = '/'
       }
     });
-  })
+  }, [])
 
   if (!api.user) {
     return <></>

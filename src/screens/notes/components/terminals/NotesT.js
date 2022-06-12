@@ -96,7 +96,7 @@ const NotesT = ({ api, search }) => {
                       }
                     >
                       {note.tags
-                        ? note.tags.split(',').map((tag, index) => {
+                        ? note.tags.map((tag, index) => {
                             if (index % 2 == 0) {
                               return (
                                 <span key={'tags-' + index} className='px-2 py-1 flex items-center text-xs rounded-md font-semibold text-green-500 bg-green-50'>

@@ -33,9 +33,9 @@ const Header = ({ api, terminal, setTerminal, setSearch, save, deleteNote, permi
             <li>
               <a onClick={() => {setTerminal('content')}}>Conteúdo</a>
             </li>
-            <li>
+            {permission > 1 ? <li>
               <a onClick={() => {setTerminal('settings')}}>Configurações</a>
-            </li>
+            </li> : false}
            {permission > 0 && terminal != 'members' ? <>
             <hr/>
             <hr/>

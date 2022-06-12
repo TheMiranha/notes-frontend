@@ -20,7 +20,7 @@ const Auth = ({ api }) => {
     if (!registrando) {
       var res = await api.login(email, password)
       if (res.response) {
-        window.location.href = '/notes'
+        window.location.href = '/profile'
       } else {
         setError('Credenciais inválidas')
       }
@@ -32,7 +32,7 @@ const Auth = ({ api }) => {
       } else {
         var res = await api.register(email, password, name)
         if (res.response) {
-          window.location.href = '/notes'
+          window.location.href = '/profile'
         } else {
           setError('Email já cadastrado')
         }

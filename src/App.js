@@ -11,7 +11,7 @@ import Share_Code from './screens/share_code/Share_Code';
 import NotFound from './screens/notFound/NotFound'
 import Profile from './screens/profile/Profile';
 
-const ENDPOINT = 'https://miranha-notes-backend.herokuapp.com'
+const ENDPOINT = 'http://localhost:8000'
 const cookie = new Cookie();
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
     init();
     var interval = setInterval(() => {
       getUserByToken();
-    },1000)
+    },5000)
     return () => clearInterval(interval);
   }, [])
 
