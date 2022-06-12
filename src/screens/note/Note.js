@@ -69,7 +69,7 @@ const Note = ({ api }) => {
   }
 
   if (!api.user) {
-    return <div>Loading...</div>
+    return <></>
   }
   return (
     <div>

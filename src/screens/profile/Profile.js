@@ -26,7 +26,7 @@ const Notes = ({ api }) => {
   }
 
   if (!api.user) {
-    return <div>Loading...</div>
+    return <></>
   }
 
   return (

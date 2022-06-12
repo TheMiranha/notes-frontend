@@ -17,7 +17,7 @@ const Share_Code = ({ api }) => {
   }, [])
 
   if (note == 'false') {
-    return <>Loading</>
+    return <></>
   }
 
   if (note == 'invalid') {
