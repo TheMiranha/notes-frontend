@@ -9,7 +9,7 @@ const Auth = ({ api }) => {
   useEffect(() => {
     api.checkToken().then(x => {
       if (x) {
-        window.location.href = '/profile'
+        window.location.href = '/notes'
       }
     });
   },[])
@@ -20,7 +20,7 @@ const Auth = ({ api }) => {
     if (!registrando) {
       var res = await api.login(email, password)
       if (res.response) {
-        window.location.href = '/profile'
+        window.location.href = '/notes'
       } else {
         setError('Credenciais inválidas')
       }
@@ -32,7 +32,7 @@ const Auth = ({ api }) => {
       } else {
         var res = await api.register(email, password, name)
         if (res.response) {
-          window.location.href = '/profile'
+          window.location.href = '/notes'
         } else {
           setError('Email já cadastrado')
         }
