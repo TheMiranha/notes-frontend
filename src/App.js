@@ -11,7 +11,7 @@ import Share_Code from './screens/share_code/Share_Code';
 import NotFound from './screens/notFound/NotFound'
 import Profile from './screens/profile/Profile';
 
-const ENDPOINT = 'https://miranha-notes-backend.herokuapp.com/'
+const ENDPOINT = 'https://miranha-notes-backend.herokuapp.com'
 const cookie = new Cookie();
 
 const App = () => {
